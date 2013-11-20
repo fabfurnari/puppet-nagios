@@ -32,7 +32,7 @@ class nagios(
       $cfgdir = '/etc/nagios'
       include nagios::centos
     }
-    'debian': {
+    debian,ubuntu: {
       $cfgdir = '/etc/nagios3'
       include nagios::debian
     }

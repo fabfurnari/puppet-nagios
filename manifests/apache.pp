@@ -11,7 +11,7 @@ class nagios::apache(
   }
 
   case $::operatingsystem {
-    'debian': {
+    debian,ubuntu: {
       file { "${nagios::defaults::vars::int_cfgdir}/apache2.conf":
         ensure => present,
         source => [ "puppet:///site_nagios/configs/${::fqdn}/apache2.conf",
